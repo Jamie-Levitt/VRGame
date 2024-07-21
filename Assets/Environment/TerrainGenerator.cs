@@ -19,6 +19,9 @@ public class TerrainGenerator : MonoBehaviour
 
     void Update ()
     {
+        offsetX += Time.deltaTime * 0.1f;
+        offsetY += Time.deltaTime * 0.1f;
+
         Terrain terrain = GetComponent<Terrain>();
         terrain.terrainData = GenerateTerrain(terrain.terrainData);
     }
